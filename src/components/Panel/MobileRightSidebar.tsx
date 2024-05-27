@@ -1,5 +1,5 @@
-import "./mobileRightSidebar.scss";
 import "../Main/right.scss";
+import "./mobileRightSidebar.scss";
 import Right from "../Main/Right";
 
 interface Props {
