@@ -1,0 +1,11 @@
+.panel__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(39, 44, 70, 1);
+  color: #fff;
+  padding: 13px 16px;
+
+  div {
+    cursor: pointer;
+  }
+}

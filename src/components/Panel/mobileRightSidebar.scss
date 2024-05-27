@@ -1,0 +1,20 @@
+.sidebar {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: -370px;
+  background-color: rgba(39, 44, 70, 1);
+  padding-top: 20px;
+  transition: 0.3s;
+  color: #fff;
+
+  &.open {
+    left: 0;
+  }
+
+  .previous {
+    display: flex;
+    column-gap: 15px;
+  }
+}

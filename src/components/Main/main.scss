@@ -1,0 +1,12 @@
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  border: 1px solid red;
+  background-color: #0f113c;
+}
+
+@media screen and (max-width: 360px) {
+  .main__container {
+    grid-template-columns: 1fr;
+  }
+}

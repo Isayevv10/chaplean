@@ -1,6 +1,18 @@
+import { useState } from "react";
 import "./navbar.scss";
+import Sidebar from "../Sidebar/Sidebar";
 
-const Navbar = () => {
+interface Props {
+  smallScreen: boolean;
+}
+
+const Navbar = ({ smallScreen }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="nav">
       <div className="logo">
@@ -10,7 +22,7 @@ const Navbar = () => {
       <div className="navigation">
         <ul>
           <li>
-            <a href="#">What is Chaplean</a>{" "}
+            <a href="#">What is Chaplean</a>
           </li>
           <li>
             <a href="#">Our difference</a>
@@ -29,9 +41,15 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="hamburger">
+      <div className="hamburger" onClick={toggleSidebar}>
         <img src="/src/assets/svg/open.png" alt="open" />
       </div>
+
+      {smallScreen ? (
+        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
