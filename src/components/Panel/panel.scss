@@ -1,6 +1,7 @@
+@import "../../styles/mixins/mixins.scss";
+
 .panel__container {
-  display: flex;
-  justify-content: space-between;
+  @include display(null, space-between);
   background-color: rgba(39, 44, 70, 1);
   color: #fff;
   padding: 13px 16px;

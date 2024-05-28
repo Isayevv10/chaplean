@@ -1,5 +1,5 @@
-import "./mobileLeftSidebar.scss";
 import "../Main/left.scss";
+import "./mobileMenuSidebar.scss";
 import Left from "../Main/Left";
 import { useEffect } from "react";
 import leftArrow from "../../assets/svg/leftArrow.png";
@@ -9,7 +9,7 @@ interface Props {
   setIsOpenLeft: () => void;
 }
 
-const MobileLeftSidebar = ({ isOpenLeft, setIsOpenLeft }: Props) => {
+const MobileMenuSidebar = ({ isOpenLeft, setIsOpenLeft }: Props) => {
   useEffect(() => {
     if (isOpenLeft) {
       document.body.style.overflow = "hidden";
@@ -23,8 +23,8 @@ const MobileLeftSidebar = ({ isOpenLeft, setIsOpenLeft }: Props) => {
   }, [isOpenLeft]);
 
   return (
-    <div className={`sidebarLeft ${isOpenLeft ? "open" : ""}`}>
-      <div className="sidebarLeft--back">
+    <div className={`sidebarMenu ${isOpenLeft ? "open" : ""}`}>
+      <div className="sidebarMenu--back">
         <div>
           <img src={leftArrow} alt="close" />
         </div>
@@ -36,4 +36,4 @@ const MobileLeftSidebar = ({ isOpenLeft, setIsOpenLeft }: Props) => {
   );
 };
 
-export default MobileLeftSidebar;
+export default MobileMenuSidebar;

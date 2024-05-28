@@ -10,7 +10,7 @@ const Footer = () => {
           <img src={logo} alt="logo" />
           <ul>
             <li>
-              <a href="">What is Chaplean</a>{" "}
+              <a href="">What is Chaplean</a>
             </li>
             <li>
               <a href="">Our difference</a>

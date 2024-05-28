@@ -1,3 +1,5 @@
+@import "../../styles/mixins/mixins.scss";
+
 .main__container--1 {
   color: #fff;
   padding: 16px;
@@ -7,21 +9,16 @@
     background-color: #272c46;
     border: 1px solid #1d9bf0b2;
     border-radius: 12px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include display(center, space-around);
 
     .main__container--1-app {
       display: flex;
       column-gap: 8px;
 
       .main__container--1-img {
-        height: 40px;
-        width: 40px;
-
+        @include widthHeight(40px, 40px);
         img {
-          height: 100%;
-          width: 100%;
+          @include widthHeight(100%, 100%);
           object-fit: contain;
         }
       }
@@ -36,8 +33,7 @@
     .main__container--1-back {
       background-color: #141526;
       border-radius: 6px;
-      width: 24px;
-      height: 24px;
+      @include widthHeight(24px, 24px);
       text-align: center;
     }
   }
@@ -63,9 +59,7 @@
     .item-1,
     .item-2,
     .item-3 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include display(center, space-between);
       color: rgba(187, 187, 187, 1);
       margin-top: 13px;
     }

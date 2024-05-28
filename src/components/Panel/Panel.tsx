@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MobileRightSidebar from "./MobileRightSidebar";
-import MobileLeftSidebar from "./MobileLeftSidebar";
 import "./panel.scss";
+import MobileMenuSidebar from "./MobileMenuSidebar";
+import MobileSearchSidebar from "./MobileSearchSidebar";
 
 const Panel = () => {
   const [isOpenRight, setIsOpenRight] = useState(false);
@@ -21,7 +21,7 @@ const Panel = () => {
       <div onClick={toggleSidebarRight}>Search</div>
 
       {isOpenRight ? (
-        <MobileRightSidebar
+        <MobileSearchSidebar
           isOpenRight={isOpenRight}
           setIsOpenRight={toggleSidebarRight}
         />
@@ -30,7 +30,7 @@ const Panel = () => {
       )}
 
       {isOpenLeft ? (
-        <MobileLeftSidebar
+        <MobileMenuSidebar
           isOpenLeft={isOpenLeft}
           setIsOpenLeft={toggleSidebarLeft}
         />

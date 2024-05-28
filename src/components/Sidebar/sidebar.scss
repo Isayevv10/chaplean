@@ -1,6 +1,7 @@
+@import "../../styles/mixins/mixins.scss";
+
 .sidebar {
-  height: 100%;
-  width: 100%;
+  @include widthHeight(100%, 100%);
   position: fixed;
   top: 0;
   left: -370px;
@@ -52,12 +53,4 @@
       }
     }
   }
-}
-
-.hamburger-icon {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  cursor: pointer;
-  z-index: 1000;
 }
