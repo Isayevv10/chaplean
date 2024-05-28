@@ -25,7 +25,7 @@ const MobileLeftSidebar = ({ isOpenLeft, setIsOpenLeft }: Props) => {
     <div className={`sidebarLeft ${isOpenLeft ? "open" : ""}`}>
       <div className="sidebarLeft--back">
         <div>
-          <img src="../../assets/svg/left.png" alt="close" />
+          <img src="/src/assets/svg/left.png" alt="close" />
         </div>
         <span onClick={setIsOpenLeft}>back</span>
       </div>
