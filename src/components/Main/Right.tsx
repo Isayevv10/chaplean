@@ -1,11 +1,13 @@
 import "./right.scss";
+import search from "/src/assets/svg/search.png";
+
 const Right = () => {
   return (
     <>
       <div className="main__container--3">
         <div className="main__container--item-1">
           <div className="search">
-            <img src="/src/assets/svg/search.png" alt="" />
+            <img src={search} alt="" />
             <input type="search" name="" id="" placeholder="Search" />
           </div>
 

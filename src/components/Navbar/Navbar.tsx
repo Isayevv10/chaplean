@@ -1,5 +1,6 @@
 import "./navbar.scss";
 import logo from "/src/assets/img/logo.png";
+import open from "/src/assets/svg/open.png";
 
 interface Props {
   toggleSidebar: () => void;
@@ -35,7 +36,7 @@ const Navbar = ({ toggleSidebar }: Props) => {
       </div>
 
       <div className="hamburger" onClick={toggleSidebar}>
-        <img src="/src/assets/svg/open.png" alt="open" />
+        <img src={open} alt="open" />
       </div>
     </div>
   );
