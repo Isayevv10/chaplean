@@ -2,6 +2,7 @@ import "./mobileLeftSidebar.scss";
 import "../Main/left.scss";
 import Left from "../Main/Left";
 import { useEffect } from "react";
+import leftArrow from "../../assets/svg/leftArrow.png";
 
 interface Props {
   isOpenLeft: boolean;
@@ -25,7 +26,7 @@ const MobileLeftSidebar = ({ isOpenLeft, setIsOpenLeft }: Props) => {
     <div className={`sidebarLeft ${isOpenLeft ? "open" : ""}`}>
       <div className="sidebarLeft--back">
         <div>
-          <img src="/src/assets/svg/left.png" alt="close" />
+          <img src={leftArrow} alt="close" />
         </div>
         <span onClick={setIsOpenLeft}>back</span>
       </div>

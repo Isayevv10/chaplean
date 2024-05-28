@@ -1,4 +1,5 @@
 import "./navbar.scss";
+import logo from "/src/assets/img/logo.png";
 
 interface Props {
   toggleSidebar: () => void;
@@ -8,7 +9,7 @@ const Navbar = ({ toggleSidebar }: Props) => {
   return (
     <div className="nav">
       <div className="logo">
-        <img src="/src/assets/img/logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
       </div>
 
       <div className="navigation">
