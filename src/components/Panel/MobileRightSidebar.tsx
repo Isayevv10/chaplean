@@ -1,6 +1,7 @@
 import "../Main/right.scss";
 import "./mobileRightSidebar.scss";
 import Right from "../Main/Right";
+import { useEffect } from "react";
 
 interface Props {
   isOpenRight: boolean;
@@ -8,13 +9,25 @@ interface Props {
 }
 
 const MobileRightSidebar = ({ isOpenRight, setIsOpenRight }: Props) => {
+  useEffect(() => {
+    if (isOpenRight) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpenRight]);
+
   return (
-    <div className={`sidebar ${isOpenRight ? "open" : ""}`}>
-      <div onClick={setIsOpenRight} className="previous">
+    <div className={`sidebarRight ${isOpenRight ? "open" : ""}`}>
+      <div className="sidebarRight--back">
         <div>
-          <img src="/src/assets/svg/left.png" alt="left" />
+          <img src="/src/assets/svg/left.png" alt="close" />
         </div>
-        <p>back</p>
+        <p onClick={setIsOpenRight}>back</p>
       </div>
 
       <Right />

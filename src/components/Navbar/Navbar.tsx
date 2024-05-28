@@ -1,18 +1,10 @@
-import { useState } from "react";
 import "./navbar.scss";
-import Sidebar from "../Sidebar/Sidebar";
 
 interface Props {
-  smallScreen: boolean;
+  toggleSidebar: () => void;
 }
 
-const Navbar = ({ smallScreen }: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
+const Navbar = ({ toggleSidebar }: Props) => {
   return (
     <div className="nav">
       <div className="logo">
@@ -44,12 +36,6 @@ const Navbar = ({ smallScreen }: Props) => {
       <div className="hamburger" onClick={toggleSidebar}>
         <img src="/src/assets/svg/open.png" alt="open" />
       </div>
-
-      {smallScreen ? (
-        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      ) : (
-        <></>
-      )}
     </div>
   );
 };
