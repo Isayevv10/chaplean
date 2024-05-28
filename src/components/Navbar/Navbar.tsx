@@ -25,7 +25,9 @@ const Navbar = ({ toggleSidebar }: Props) => {
             <a href="#">Pricing</a>
           </li>
           <li>
-            <a href="#">Docs</a>
+            <a href="#" className="docs">
+              Docs
+            </a>
           </li>
           <li>
             <a href="#">

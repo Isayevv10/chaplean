@@ -28,7 +28,9 @@ const Sidebar = ({ isOpen, toggleSidebar }: Props) => {
             <a href="#">Our difference</a>
           </li>
           <li>
-            <a href="#">Docs</a>
+            <a href="#" className="docs">
+              Docs
+            </a>
           </li>
           <li>
             <a href="#">Pricing</a>
