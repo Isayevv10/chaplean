@@ -1,4 +1,6 @@
 import "./sidebar.scss";
+import logo from "/src/assets/img/logo.png";
+import close from "/src/assets/svg/close.png";
 
 interface Props {
   isOpen: boolean;
@@ -11,10 +13,10 @@ const Sidebar = ({ isOpen, toggleSidebar }: Props) => {
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <div>
           <div>
-            <img src="/src/assets/img/logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </div>
           <div className="close-icon" onClick={toggleSidebar}>
-            <img src="/src/assets/svg/close.png" alt="close" />
+            <img src={close} alt="close" />
           </div>
         </div>
 

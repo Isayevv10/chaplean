@@ -1,11 +1,13 @@
 import "./footer.scss";
+import logo from "/src/assets/img/logo.png";
+import download from "/src/assets/svg/download.png";
 
 const Footer = () => {
   return (
     <>
       <div className="footer">
         <div className="navigation">
-          <img src="/src/assets/img/logo.png" alt="logo" />
+          <img src={logo} alt="logo" />
           <ul>
             <li>
               <a href="">What is Chaplean</a>{" "}
@@ -27,7 +29,7 @@ const Footer = () => {
 
         <div className="download">
           <button className="download-button">
-            <img src="/src/assets/svg/download.png" alt="download" />
+            <img src={download} alt="download" />
             <p>Download</p>
           </button>
         </div>
