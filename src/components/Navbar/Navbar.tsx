@@ -8,7 +8,7 @@ const Navbar = ({ toggleSidebar }: Props) => {
   return (
     <div className="nav">
       <div className="logo">
-        <img src="../../assets/img/logo.png" alt="logo" />
+        <img src="\src\assets\img\logo.png" alt="logo" />
       </div>
 
       <div className="navigation">
